@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>FaceBookPageObjectModel</groupId>
+	<artifactId>FaceBookPageObjectModel</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>FaceBookPageObjectModel</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<aspectj.version>1.8.10</aspectj.version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.github.igor-suhorukov/chromedriver -->
+		<dependency>
+			<groupId>com.github.igor-suhorukov</groupId>
+			<artifactId>chromedriver</artifactId>
+			<version>2.44</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.16-beta2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>ooxml-schemas</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>openxml4j</artifactId>
+			<version>1.0-beta</version>
+		</dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.19.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+			<plugins>
+				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+				<!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+				<!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<plugin>
+
+					<groupId>com.lazerycode.jmeter</groupId>
+
+					<artifactId>jmeter-maven-plugin</artifactId>
+
+					<version>2.9.0</version>
+
+					<configuration>
+
+						=======
+
+						>>>>>>> All api
+
+						<testResultsTimestamp>false</testResultsTimestamp>
+
+						<propertiesUser>
+
+<!--							<threads>${threadCount}</threads>-->
+
+<!--							<rampup>${rampupTime}</rampup>-->
+
+<!--							<baseUrl>${baseUrl}</baseUrl>-->
+
+<!--							<giraffeUrl>${giraffeUrl}</giraffeUrl>-->
+
+							<csvDataFile>${basedir}</csvDataFile>
+
+							<jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
+
+							<jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
+
+							<jmeter.save.saveservice.label>true</jmeter.save.saveservice.label>
+
+							<jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
+
+							<jmeter.save.saveservice.response_code>true</jmeter.save.saveservice.response_code>
+
+							<jmeter.save.saveservice.response_message>true</jmeter.save.saveservice.response_message>
+
+							<jmeter.save.saveservice.response_data>true</jmeter.save.saveservice.response_data>
+
+							<jmeter.save.saveservice.successful>true</jmeter.save.saveservice.successful>
+
+							<jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
+
+							<jmeter.save.saveservice.thread_name>true</jmeter.save.saveservice.thread_name>
+
+							<jmeter.save.saveservice.time>true</jmeter.save.saveservice.time>
+
+						</propertiesUser>
+
+						<testFilesIncluded>
+
+<!--							<jMeterTestFile>${jmeterScript}</jMeterTestFile>-->
+
+						</testFilesIncluded>
+
+					</configuration>
+
+					<executions>
+
+						<execution>
+
+							<id>jmeter-tests</id>
+
+							<phase>verify</phase>
+
+							<goals>
+
+								<goal>jmeter</goal>
+
+							</goals>
+
+						</execution>
+
+					</executions>
+
+				</plugin>
+<!--				<plugin>-->
+
+<!--					<artifactId>maven-antrun-plugin</artifactId>-->
+
+<!--					<executions>-->
+
+<!--						<execution>-->
+
+<!--							<phase>pre-site</phase>-->
+
+<!--							<configuration>-->
+
+<!--								<tasks>-->
+
+<!--									<mkdir dir=”${basedir}/target/jmeter/results/dashboard” />-->
+
+<!--									<copy file=”${basedir}/src/test/resources/reportgenerator.properties”-->
+
+<!--									tofile=”${basedir}/target/jmeter/bin/reportgenerator.properties” />-->
+
+<!--									<copy todir=”${basedir}/target/jmeter/bin/report-template”>-->
+
+<!--									<fileset dir=”${basedir}/src/test/resources/report-template” />-->
+
+<!--								</copy>-->
+
+<!--								<java>-->
+
+<!--									<arg value=”-g” />-->
+
+<!--									<arg value=”${basedir}/target/jmeter/results/*.jtl” />-->
+
+<!--									<arg value=”-o” />-->
+
+<!--									<arg value=”${basedir}/target/jmeter/results/dashboard/” />-->
+
+<!--								</java>-->
+
+<!--							</tasks>-->
+
+<!--						</configuration>-->
+
+<!--						<goals>-->
+
+<!--							<goal>run</goal>-->
+
+<!--						</goals>-->
+
+<!--					</execution>-->
+
+<!--				</executions>-->
+
+<!--			</plugin>-->
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
